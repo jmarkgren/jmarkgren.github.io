@@ -1,0 +1,36 @@
+.my_name {
+	margin-top: 5rem;
+}
+
+.my_subtitle {
+	margin-bottom:3rem;
+	margin-top: 1rem;
+}
+
+nav {
+  padding-bottom:2rem;
+  font-size: .9rem;
+}
+.nav a {
+ 
+  color: rgb(170, 170, 170);
+
+}
+
+.nav a:hover {
+  color: rgb(109, 182, 102);
+
+}
+
+.nav a:active {
+  color: black;
+}
+
+.nav a:visited {
+  color: rgb (136, 136, 136);
+}
+
+.line {
+  margin-bottom: 1rem;
+  border-bottom:solid 1px;
+}

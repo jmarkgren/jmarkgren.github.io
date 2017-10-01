@@ -1,133 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" Udacity Front End Project ">
-    <meta name="author" content=" Janelle ">
-    <title>Cameron Pittman: Portfolio</title>
-
-    <!-- Load font asynchronously so it doesn't block rendering -->
-    <script>
-      WebFontConfig = {
-        google: { families: [ 'Open+Sans:400, 700'] }
-      };
-
-      (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
-        wf.async = true;
-        s.parentNode.insertBefore(wf, s);
-      })(document);
-    </script>
-
-    <!-- Inline css so it doesn't block rendering -->
-    <style>
-      html {
-        font-size: 100%;
-        overflow-y: scroll;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: none;
-      }
-
-      body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
-      body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
-
-      a { color: #12C; }
-      a:visited { color: #61C; }
-      a:focus { outline: thin dotted; }
-      a:hover, a:active { color: #c00; outline: 0; }
-
-      b, strong { font-weight: bold; }
-      pre, code { font-family: monospace, monospace; font-size: 1em; }
-      ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-      img { border: 0; max-width: 100%; }
-
-      body { background: #fff; }
-
-      header, footer, .container { max-width: 45em; margin: 0 auto; }
-      header { padding: 0 0.5em; color: #C90B0B; }
-      header img { border-radius: 40px; float: left; }
-      header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-      header p span { font-size: 0.8em; font-weight: normal;}
-
-      .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-        border-bottom: 1px solid #ccc;
-        border-top: 1px solid #ccc;
-      }
-
-      .content { padding: 1em 1em; }
-      .content li { list-style-type: none; font-size: 1.1em;}
-      li img { float:left; padding-right: 1em; }
-      li p { font-size: 0.9em; font-style: italic; }
-
-      footer {
-        padding: 0 0.5em;
-        border-top: 1px solid #ccc;
-      }
-
-      footer span { float: right; font-style: italic; }
-
-    </style>
-
-    <link rel="stylesheet" type="text/css" href="css/mobile.css" media="max-width: 480px">
-    <link href="css/print.css" rel="stylesheet" media="print">
-
-    <script async>
-      (function(w,g){w['GoogleAnalyticsObject']=g;
-      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
-
-      // Optional TODO: replace with your Google Analytics profile ID.
-      ga('create', 'UA-XXXX-Y');
-      ga('send', 'pageview');
-    </script>
-    <script async src="http://www.google-analytics.com/analytics.js" ></script>
-    <script async src="js/perfmatters.js"></script>
-  </head>
-
-  <body>
-    <header>
-      <a href="/"><img src="img/profilepic.jpg"></a>
-      <p>Cameron Pittman<br><span>Course Developer</span></p>
-    </header>
-
-    <div class="container">
-      <div class="hero">
-        <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Providencia Restaurant Guide</title>
+    <!--Bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container app-container my-2">
+    <div class="row app-container">
+      <div class="col-md-4 options-col">
+        <div class="options-box">
+          <div class= "options-header">
+            <h1>Providencia Restaurant Guide</h1>
+            <div class="form-group">
+              <label class="mb-0" for="filter-text">Filter results</label>
+              <input type="text" class="form-control" id="filter-text" aria-describedby="filter" placeholder="Start typing a restaurant name">
+            </div>
+          </div>
+          <ul data-bind="foreach: filterableList" class="list-group">
+            <li data-bind="text: title, click: $root.openInfoWindow" class="restaurant-list-item list-group-item list-group-item-action"></li>
+          </ul>
+        </div>
       </div>
-
-      <div class="content">
-        <ul>
-          <li>
-            <img src="https://lh4.ggpht.com/kJEnfqhPvtm4m3EneSZ4fWYGS8lW4YNhEjk6zPkyrQaBUHc-2Y_ElDic99NHI0h-UBLXVbRCjFybFvrWxdk=s100">
-            <a href="project-2048.html">Build Your Own 2048!</a>
-            <p>I made my own version of 2048. How cool is that!?</p>
-          </li>
-
-          <li>
-            <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
-            <a href="project-webperf.html">Website Performance Optimization</a>
-            <p>Hey... this class looks familiar.</p>
-          </li>
-
-          <li>
-            <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-            <a href="project-mobile.html">Mobile Web Development</a>
-            <p>Making mobile apps isn't so hard after all.</p>
-          </li>
-
-          <li>
-            <img style="width: 100px;" src="img/project4.jpg">
-            <a href="views/pizza.html">Cam's Pizzeria</a>
-            <p>Who wants a performant pizza?</p>
-          </li>
-        </ul>
+      <div class="col-md-8">
+        <div id="map"></div>
       </div>
-
-      <footer>
-        <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-      </footer>
     </div>
-  </body>
+  </div><!-- /.container-->
+  <!--Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <script src="js/lib/knockout-3.2.0.js"></script>
+  <script src="js/app.js"></script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKhQ2fJSsjd54BAmknttPVYZDJAgV-2VU&v=3&callback=initMap">
+  </script>
+</body>
 </html>

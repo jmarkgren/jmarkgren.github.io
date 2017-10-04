@@ -36,7 +36,6 @@ hr {
   background: #fff;
   border: 1px solid #999;
   border-radius: 3px;
-  height: 100%;
   line-height: 35px;
   text-align: left;
 }
@@ -57,5 +56,13 @@ hr {
   }
   .options-col {
     margin-bottom: 10px;
+    max-height: 50%;
+  }
+  .options-box {
+    overflow-y: scroll;
+    max-height: 100%;
+  }
+  .map-container {
+    height: 50%;
   }
 }

@@ -6,53 +6,51 @@ var infoWindow;
 //Hardcoded restaurant locations for map
 var restaurants = [{
   title: 'Nicolas',
+  venue: '4c62e07bde1b2d7fba55e370',
   location: {
     lat: -33.421020,
     lng: -70.606640
   }},
   {
     title: 'Flanner\'s Irish Pub',
+    venue: '4b5fc3def964a520f3cb29e3',
     location: {
       lat: -33.417150, lng: -70.601728
     }},
   {
     title: 'Insert Coin',
+    venue: '54de97f3498e2232c9e3bf34',
     location: {
       lat: -33.427433,
       lng: -70.618138
     }},
   {
-    title: 'Italita',
-    location: {
-      lat: -33.423880,
-      lng: -70.607210}},
-  {
     title: 'La Mechada Nacional',
+    venue: '54286265498e5abfe7469a3b',
     location: {
       lat: -33.422159,
       lng: -70.608724}},
   {
     title: 'Liguria',
+    venue: '4b5279b8f964a520097f27e3',
     location: {
       lat: -33.428310,
       lng: -70.619139}},
   {
     title: 'Lomit\'s',
+    venue: '4b44cc8df964a52083fc25e3',
     location: {
       lat: -33.423880,
       lng: -70.612827}},
   {
     title: 'The Black Rock',
+    venue: '4fdfcc28e4b02857f08c186e',
     location: {
       lat: -33.418958,
-      lng: -70.603924}},
-  {
-    title: 'Poké Bar',
-    location: {
-      lat: -33.414486,
-      lng: -70.601975}}
+      lng: -70.603924}}
 ];
 
+//Restaurant constructor
 var Restaurant = function(location, i){
   this.title = location.title;
   this.marker = markers[i];
@@ -116,13 +114,16 @@ var initMap = function() {
   for (var i = 0; i < restaurants.length; i++) {
     var position = restaurants[i].location;
     var title = restaurants[i].title;
+    var venue = restaurants[i].venue;
 
     //Create a marker for every location and put into the markers array
     var marker = new google.maps.Marker({
       map: map,
       position: position,
       title: title,
+      venue: venue,
       animation: google.maps.Animation.DROP,
+      icon: 'img/markpoint.png',
       id: i
     });
 
@@ -132,6 +133,7 @@ var initMap = function() {
     marker.addListener('click', function(){
       var marker = this;
       populateInfoWindow(marker, marker.title);
+      marker.setIcon('img/markpoint-active.png');
     });
     //Use the markers to set the bounds of the map
     bounds.extend(markers[i].position);
@@ -155,40 +157,57 @@ var initMap = function() {
     //Check to make sure the info window isn't already open on this marker
     if (infowindow.marker != marker) {
       infowindow.marker = marker;
-      infowindow.setContent('<div>' + marker.title + '</div>');
-      infowindow.open(map, marker);
+
       //make sure the marker is properly cleared if the window is closed
       infowindow.addListener('closeclick',function(){
         infowindow.setmarker = null;
+        marker.setIcon('img/markpoint.png');
       });
     }
-    //Use Foursquare API to display cost braket
-    //Example here https://developer-test.foursquare.com/docs/api/venues/search
 
-    //Set the lat and long strings
-    var lat = marker.position.lat()
-    var long = marker.position.lng()
-    //Use lat and long to create foursquare url
-    var foursquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' +
-    lat + ',' + long +
-    '&client_id=5ATN4OQMRW4ETRIO2JLNNQMJYKYIHOKWBPAGJFINYYRYXBX5' +
-    '&client_secret=UQ5RAMV0H2LFV534MD5LVPOBMJCN0QOE2P1CPMXNLNFBLVJL&v=20130815';
+    //Use Foursquare API to display address, price tier
+    //Set the Foursquare venue value
+    var foursquareVenue = marker.venue;
+
+    //Use foursquare venue number to create foursquare url
+    var foursquareURL = 'https://api.foursquare.com/v2/venues/' +
+    foursquareVenue +
+    '?&client_id=5ATN4OQMRW4ETRIO2JLNNQMJYKYIHOKWBPAGJFINYYRYXBX5' +
+    '&client_secret=UQ5RAMV0H2LFV534MD5LVPOBMJCN0QOE2P1CPMXNLNFBLVJL&v=20171002';
+    //Request info from foursquare api
     $.ajax({
       type: "GET",
       url: foursquareURL,
-      dataType: "jsonp",
+      dataType: "json",
       success: function(data) {
-        console.log('success');
+        var name = marker.title;
 
+        //Store response from Foursquare
+        var venueData = data.response.venue;
+
+        //Define the info that will appear in info window
+        var address = venueData.location.address;
+        //This is a trick so that undefined data will still be returned
+        var price = venueData && venueData.price && venueData.price.message;
+
+        //Set the info window content and open it
+        infowindow.setContent('<h5>' + name + '</h5>' +
+          '<p>' + address + '</p>' +
+          '<p>' + 'Price: ' + price + '</p>');
+        infowindow.open(map, marker);
+
+      },
+      error: function (textStatus, errorThrown) {
+        //Set the info window error content and open it
+        infowindow.setContent('<h5>' + marker.title + '</h5>' +
+          '<p>' + 'Foursquare data temporarily unavailable' + '</p>');
+        infowindow.open(map, marker);
       }
-
     });
-
-  } // End populate info windo
-
+  };
 };
 
-
-
-
+function googleError () {
+  alert("Google Maps is temporarily unavailable, please try again later.");
+}
 

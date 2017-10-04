@@ -207,7 +207,3 @@ var initMap = function() {
   };
 };
 
-function googleError () {
-  alert("Google Maps is temporarily unavailable, please try again later.");
-}
-

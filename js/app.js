@@ -1,6 +1,5 @@
 //Create global variables
 var map;
-var marker;
 var markers = [];
 var infoWindow;
 
@@ -70,18 +69,24 @@ var ViewModel = function (){
   });
 
   //Create the list of all restaurants with filtering capability
-  //Simple example of filtering found at https://stackoverflow.com/questions/29667134/knockout-search-in-observable-array
-  //More complex example of filtering an array found at http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html
+  //Example of filtering an array found at http://www.knockmeout.net/2011/04/utility-functions-in-knockoutjs.html
   self.filterableList = ko.computed(function() {
     var filter = self.filter().toLowerCase();
     //Show all restaurants by default
     if (!filter) {
       return self.restaurantsList();
-
       //Filter results based on user input and show only matching names and markers
     }  else {
-        return ko.utils.arrayFilter(self.restaurantsList(), function(restuarant) {
-            return ko.utils.stringStartsWith(restaurant.name().toLowerCase(), filter);
+        return ko.utils.arrayFilter(self.restaurantsList(), function(restaurant) {
+          var name = restaurant.title.toLowerCase();
+          //indexOf checks if the string is present within another and if it's not it returns -1
+          var found = name.indexOf(filter) !== -1;
+          if(!found){
+            restaurant.marker.setVisible(false);
+          } else {
+            restaurant.marker.setVisible(true);
+          } return found;
+
         });
       }
   });
@@ -103,10 +108,9 @@ var initMap = function() {
 
   //Loop to use the restaurants array & create a marker for each one
   for (var i = 0; i < restaurants.length; i++) {
-    createMarker(restaurants[i], i);
+    var marker = createMarker(restaurants[i], i);
     //Push marker to array
     markers.push(marker);
-
   }
 
   function createMarker(restuarant, i){
@@ -132,14 +136,13 @@ var initMap = function() {
       marker.setIcon('img/markpoint-active.png');
     });
 
-  bounds.extend(marker.position);
+    bounds.extend(marker.position);
 
-  //Extend the boundaries of the map for each marker
-  map.fitBounds(bounds);
+    //Extend the boundaries of the map for each marker
+    map.fitBounds(bounds);
 
     return marker;
   }
-
 
   // Allow a pop up window when user clicks on a marker
   var infowindow = new google.maps.InfoWindow({
@@ -147,8 +150,6 @@ var initMap = function() {
   });
 
   ko.applyBindings(new ViewModel());
-
-
 
   //Funtion that populates the info window when the marker is clicked
   // only one info window will show up at a time

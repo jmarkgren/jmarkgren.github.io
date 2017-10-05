@@ -74,6 +74,9 @@ var ViewModel = function (){
     var filter = self.filter().toLowerCase();
     //Show all restaurants by default
     if (!filter) {
+      self.restaurantsList().forEach(function(restaurant) {
+        restaurant.marker.setVisible(true);
+      });
       return self.restaurantsList();
       //Filter results based on user input and show only matching names and markers
     }  else {
@@ -113,10 +116,10 @@ var initMap = function() {
     markers.push(marker);
   }
 
-  function createMarker(restuarant, i){
-    var position = restuarant.location;
-    var title = restuarant.title;
-    var venue = restuarant.venue;
+  function createMarker(restaurant, i){
+    var position = restaurant.location;
+    var title = restaurant.title;
+    var venue = restaurant.venue;
 
     //Create a marker for every location and put into the markers array
     var marker = new google.maps.Marker({

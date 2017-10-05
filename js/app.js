@@ -1,5 +1,6 @@
 //Create global variables
 var map;
+var marker;
 var markers = [];
 var infoWindow;
 
@@ -75,24 +76,14 @@ var ViewModel = function (){
     var filter = self.filter().toLowerCase();
     //Show all restaurants by default
     if (!filter) {
-      self.restaurantsList().forEach(function(place) {
-      place.marker.setVisible(true);
-    });
       return self.restaurantsList();
+
       //Filter results based on user input and show only matching names and markers
-    } else {
-        return ko.utils.arrayFilter(self.restaurantsList(), function(place) {
-          var title = place.title.toLowerCase();
-          var marker = place.marker;
-          var match = title.indexOf(filter) !== -1;
-            if (!match) {
-              marker.setVisible(false);
-            } else {
-              marker.setVisible(true);
-            }
-            return match;
+    }  else {
+        return ko.utils.arrayFilter(self.restaurantsList(), function(restuarant) {
+            return ko.utils.stringStartsWith(restaurant.name().toLowerCase(), filter);
         });
-    }
+      }
   });
   //Open the info window for the corresponding marker/restaurant name
   self.openInfoWindow = function(location){
@@ -112,9 +103,16 @@ var initMap = function() {
 
   //Loop to use the restaurants array & create a marker for each one
   for (var i = 0; i < restaurants.length; i++) {
-    var position = restaurants[i].location;
-    var title = restaurants[i].title;
-    var venue = restaurants[i].venue;
+    createMarker(restaurants[i], i);
+    //Push marker to array
+    markers.push(marker);
+
+  }
+
+  function createMarker(restuarant, i){
+    var position = restuarant.location;
+    var title = restuarant.title;
+    var venue = restuarant.venue;
 
     //Create a marker for every location and put into the markers array
     var marker = new google.maps.Marker({
@@ -126,27 +124,28 @@ var initMap = function() {
       icon: 'img/markpoint.png',
       id: i
     });
-
-    //Push marker to array
-    markers.push(marker);
+    restaurants[i].marker = marker;
     //Open the info window when a marker is clicked
     marker.addListener('click', function(){
       var marker = this;
       populateInfoWindow(marker, marker.title);
       marker.setIcon('img/markpoint-active.png');
     });
-    //Use the markers to set the bounds of the map
-    bounds.extend(markers[i].position);
-  }
+
+  bounds.extend(marker.position);
+
   //Extend the boundaries of the map for each marker
   map.fitBounds(bounds);
+
+    return marker;
+  }
+
 
   // Allow a pop up window when user clicks on a marker
   var infowindow = new google.maps.InfoWindow({
     maxWidth:250
   });
 
-  var infoWindow = new google.maps.InfoWindow();
   ko.applyBindings(new ViewModel());
 
 

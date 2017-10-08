@@ -200,7 +200,7 @@ var initMap = function() {
         var address = venueData.location.address;
         var price = venueData.price;
         //Check to see if price is available from Foursquare
-        if(price == null) {
+        if(price === null || price === undefined) {
           price = "not available";
         } else {
           price = venueData.price.message;

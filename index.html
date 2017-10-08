@@ -11,8 +11,8 @@
 <body>
   <div class="container app-container my-2">
     <div class="row app-container">
-      <div class="col-md-4 options-col">
-        <div class="options-box">
+      <section class="col-md-4 options-col">
+        <aside class="options-box">
           <div class= "options-header">
             <h1>Providencia Restaurant Guide</h1>
             <div class="form-group">
@@ -23,11 +23,11 @@
           <ul data-bind="foreach: filterableList" class="list-group">
             <li data-bind="text: title, click: $root.openInfoWindow" class="restaurant-list-item list-group-item list-group-item-action"></li>
           </ul>
-        </div>
-      </div>
-      <div class="col-md-8 map-container">
+        </aside>
+      </section>
+      <section class="col-md-8 map-container">
         <div id="map"></div>
-      </div>
+      </section>
     </div>
   </div><!-- /.container-->
   <!--Bootstrap scripts -->

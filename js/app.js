@@ -116,6 +116,12 @@ var initMap = function() {
     markers.push(marker);
   }
 
+  function resetMarkers() {
+    markers.forEach((marker) => {
+      marker.setIcon('img/markpoint.png');
+    })
+  }
+
   function createMarker(restaurant, i){
     var position = restaurant.location;
     var title = restaurant.title;
@@ -134,6 +140,7 @@ var initMap = function() {
     restaurants[i].marker = marker;
     //Open the info window when a marker is clicked
     marker.addListener('click', function(){
+      resetMarkers();
       var marker = this;
       populateInfoWindow(marker, marker.title);
       marker.setIcon('img/markpoint-active.png');
@@ -164,6 +171,7 @@ var initMap = function() {
       //make sure the marker is properly cleared if the window is closed
       infowindow.addListener('closeclick',function(){
         infowindow.setmarker = null;
+        console.log('closing');
         marker.setIcon('img/markpoint.png');
       });
     }
@@ -190,8 +198,13 @@ var initMap = function() {
 
         //Define the info that will appear in info window
         var address = venueData.location.address;
-        //This is a trick so that undefined data will still be returned
-        var price = venueData && venueData.price && venueData.price.message;
+        var price = venueData.price;
+        //Check to see if price is available from Foursquare
+        if(price == null) {
+          price = "not available";
+        } else {
+          price = venueData.price.message;
+        }
 
         //Set the info window content and open it
         infowindow.setContent('<h5>' + name + '</h5>' +
@@ -209,4 +222,9 @@ var initMap = function() {
     });
   };
 };
+
+//Google maps error
+function googleError(){
+  alert("Google Maps is temporarily unavailable, please try again.")
+}
 

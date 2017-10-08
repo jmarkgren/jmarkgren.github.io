@@ -119,7 +119,7 @@ var initMap = function() {
   function resetMarkers() {
     markers.forEach((marker) => {
       marker.setIcon('img/markpoint.png');
-    })
+    });
   }
 
   function createMarker(restaurant, i){
@@ -200,7 +200,7 @@ var initMap = function() {
         var address = venueData.location.address;
         var price = venueData.price;
         //Check to see if price is available from Foursquare
-        if(price == null) {
+        if(price === null) {
           price = "not available";
         } else {
           price = venueData.price.message;
@@ -225,6 +225,6 @@ var initMap = function() {
 
 //Google maps error
 function googleError(){
-  alert("Google Maps is temporarily unavailable, please try again.")
+  alert("Google Maps is temporarily unavailable, please try again.");
 }
 

@@ -1,16 +1,26 @@
-# Providencia Restaurant Guide
+# Welcome to Front – Multipurpose Responsive Template! #
 
-As part of the Udacity Front End Developer Nanodegree Program, I have created a restaurant guide for the Providencia neighborhood in Santiago, Chile. To do this, I integrated Google Maps and Foursquare APIs.
+Front Template by Htmlstream
 
-## How to run (2 options)
+### Documentation and Getting Started ###
 
-#### Live
-1. Go to https://jmarkgren.github.io/ to use the live version of the application
+The overall development documentation is available at `documentation/index.html` and Gulp documentation at `documentation/getting-started/gulp.html`.
 
-#### On your computer
-1. Go to https://github.com/jmarkgren/jmarkgren.github.io
-2. Clone or download the repo files
-3. Open index.html
+Below is quick steps to run Gulp:
 
-##### Note
-You will need an internet connection in order to use this application
+- npm install
+- gulp
+
+Yup, that's it.
+
+### License ###
+
+Front is licensed under Bootstrap Themes and you can find more detailed information about it here: https://themes.getbootstrap.com/licenses
+
+### Theme Support ###
+
+Have a question? No worries! Front comes with 6 months of free support. We take seriously every issue that is reported to us, and we aim to resolve each one as quickly as possible. Feel free to “Contact Us” at https://htmlstream.com/contact-us
+
+### Need Front Template customization? ###
+
+We offer affordable, professional and trendy customized design solutions, solely for your own projects! Front Template can be easily customized with its cutting-edge components and features. However, if you feel you need any further customization please drop us a message at https://htmlstream.com/hire-us and our dedicated team will assist you with your inquiries.

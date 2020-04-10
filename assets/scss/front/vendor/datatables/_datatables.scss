@@ -1,0 +1,60 @@
+/*------------------------------------
+  Datatable
+------------------------------------*/
+
+.datatable {
+  .dataTables_length,
+  .dataTables_filter,
+  .dataTables_info,
+  .dataTables_paginate {
+    display: none;
+  }
+
+  &-striped {
+    .odd {
+      background-color: $gray-200;
+    }
+  }
+
+  &-content {
+    td[colspan] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .datatable-trigger {
+    cursor: pointer;
+
+    &-icon {
+      &::before {
+        display: inline-block;
+        font-family: $font-family-font-awesome-icon;
+        font-weight: 900;
+        content: "\f107";
+        margin-right: .75rem;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .opened {
+    .datatable-trigger-icon {
+      &::before {
+        content: "\f106";
+      }
+    }
+  }
+
+  &-thead-icon {
+    display: block;
+    line-height: .7;
+    cursor: pointer;
+    color: $gray-400;
+
+    &:hover,
+    &:active {
+      color: $primary;
+    }
+  }
+}

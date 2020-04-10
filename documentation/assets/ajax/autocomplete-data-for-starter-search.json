@@ -1,0 +1,315 @@
+[
+  {
+    "label": "Intro page",
+    "category": "Starter",
+    "url": "index.html"
+  },{
+    "label": "Clients static",
+    "category": "Clients",
+    "url": "clients.html"
+  },{
+    "label": "Clients with carousel",
+    "category": "Clients",
+    "url": "clients-with-carousel.html"
+  },{
+    "label": "Accordion",
+    "category": "Components",
+    "url": "collapse.html"
+  },{
+    "label": "Collapse",
+    "category": "Components",
+    "url": "collapse.html"
+  },{
+    "label": "Call-to-action (CTA)",
+    "category": "Components",
+    "url": "cta.html"
+  },{
+    "label": "Datatables",
+    "category": "Components",
+    "url": "datatables.html"
+  },{
+    "label": "Default (White background)",
+    "category": "Footers",
+    "url": "footers.html"
+  },{
+    "label": "Footers dark background",
+    "category": "Footers",
+    "url": "footers-dark.html"
+  },{
+    "label": "Footers primary background",
+    "category": "Footers",
+    "url": "footers-primary.html"
+  },{
+    "label": "Form layouts - Authentication forms",
+    "category": "Form layouts",
+    "url": "form-layouts-authentication-forms.html"
+  },{
+    "label": "Form layouts - Checkbox forms",
+    "category": "Form layouts",
+    "url": "form-layouts-checkbox-forms.html"
+  },{
+    "label": "Form layouts - Contact & Feedback forms",
+    "category": "Form layouts",
+    "url": "form-layouts-contact-forms.html"
+  },{
+    "label": "Form layouts - File attachement forms",
+    "category": "Form layouts",
+    "url": "form-layouts-file-attachement-forms.html"
+  },{
+    "label": "Form layouts - Search forms",
+    "category": "Form layouts",
+    "url": "form-layouts-search-forms.html"
+  },{
+    "label": "Form layouts - Toggle and Switch forms",
+    "category": "Form layouts",
+    "url": "form-layouts-toggle-and-switch-forms.html"
+  },{
+    "label": "Gallery grid",
+    "category": "Gallery",
+    "url": "gallery-grid.html"
+  },{
+    "label": "Gallery masonry",
+    "category": "Gallery",
+    "url": "gallery-masonry.html"
+  },{
+    "label": "Gallery with carousel",
+    "category": "Gallery",
+    "url": "gallery-with-carousel.html"
+  },{
+    "label": "Header layouts",
+    "category": "Components",
+    "url": "header-layouts.html"
+  },{
+    "label": "Hero",
+    "category": "Components",
+    "url": "hero.html"
+  },{
+    "label": "Hero products",
+    "category": "Components",
+    "url": "hero-products.html"
+  },{
+    "label": "Hero subscribe",
+    "category": "Components",
+    "url": "hero-subscribe.html"
+  },{
+    "label": "Icon blocks - Center aligned",
+    "category": "Icon blocks",
+    "url": "icon-blocks-center-aligned.html"
+  },{
+    "label": "Icon blocks - Left aligned",
+    "category": "Icon blocks",
+    "url": "icon-blocks-left-aligned.html"
+  },{
+    "label": "Indicators",
+    "category": "Components",
+    "url": "indicators.html"
+  },{
+    "label": "Timeline",
+    "category": "Components",
+    "url": "indicators.html"
+  },{
+    "label": "Info - Colorful",
+    "category": "Info",
+    "url": "info-colorful.html"
+  },{
+    "label": "Info - Grid",
+    "category": "Info",
+    "url": "info-grid.html"
+  },{
+    "label": "Info - List",
+    "category": "Info",
+    "url": "info-list.html"
+  },{
+    "label": "Media objects",
+    "category": "Components",
+    "url": "media-objects.html"
+  },{
+    "label": "Reviews",
+    "category": "Components",
+    "url": "media-objects.html"
+  },{
+    "label": "Comments",
+    "category": "Components",
+    "url": "media-objects.html"
+  },{
+    "label": "Modal window",
+    "category": "Components",
+    "url": "modal-window.html"
+  },{
+    "label": "Notification",
+    "category": "Components",
+    "url": "notification.html"
+  },{
+    "label": "News blogs - Grid",
+    "category": "News blogs",
+    "url": "news-blogs-grid.html"
+  },{
+    "label": "News blogs - List",
+    "category": "News blogs",
+    "url": "news-blogs-list.html"
+  },{
+    "label": "News blogs - Masonry",
+    "category": "News blogs",
+    "url": "news-blogs-masonry.html"
+  },{
+    "label": "Pagination",
+    "category": "Components",
+    "url": "pagination.html"
+  },{
+    "label": "Pricing - Static",
+    "category": "Pricing",
+    "url": "pricing-static.html"
+  },{
+    "label": "Pricing - Interactive",
+    "category": "Pricing",
+    "url": "pricing-interactive.html"
+  },{
+    "label": "Products - Grid",
+    "category": "Products",
+    "url": "products-grid.html"
+  },{
+    "label": "Products - List",
+    "category": "Products",
+    "url": "products-list.html"
+  },{
+    "label": "Sidebar examples",
+    "category": "Components",
+    "url": "sidebar-examples.html"
+  },{
+    "label": "Statistics",
+    "category": "Components",
+    "url": "stats.html"
+  },{
+    "label": "Statistics Interactive",
+    "category": "Components",
+    "url": "stats-interactive.html"
+  },{
+    "label": "Tabs",
+    "category": "Components",
+    "url": "tabs.html"
+  },{
+    "label": "Tables",
+    "category": "Components",
+    "url": "tables.html"
+  },{
+    "label": "Team",
+    "category": "Components",
+    "url": "team.html"
+  },{
+    "label": "Testimonials - Static",
+    "category": "Testimonials",
+    "url": "testimonials.html"
+  },{
+    "label": "Testimonials with carousel",
+    "category": "Testimonials",
+    "url": "testimonials-with-carousel.html"
+  },{
+    "label": "Video player - Inline",
+    "category": "Video player",
+    "url": "video-player-inline.html"
+  },{
+    "label": "Video player - Popup",
+    "category": "Video player",
+    "url": "video-player-popup.html"
+  },{
+    "category": "Header layouts",
+    "label": "Headers",
+    "url": "header-layouts.html#headers"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Demo headers",
+    "url": "header-layouts.html#demo-headers"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Collapse breakpoint",
+    "url": "header-layouts.html#header-default-collapse-breakpoint"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Logos",
+    "url": "header-layouts.html#header-logos"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Alignments",
+    "url": "header-layouts.html#header-alignments"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Events",
+    "url": "header-layouts.html#header-events"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Absolute top",
+    "url": "header-layouts.html#header-default-absolute-top"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Absolute bottom",
+    "url": "header-layouts.html#header-default-absolute-bottom"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Absolute second screen",
+    "url": "header-layouts.html#header-default-absolute-second-screen"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Absolute top center aligned logo on top",
+    "url": "header-layouts.html#header-default-absolute-top-center-aligned-logo-on-top"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Sticky top",
+    "url": "header-layouts.html#header-default-sticky-top"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Sticky bottom",
+    "url": "header-layouts.html#header-default-sticky-bottom"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Toggle style",
+    "url": "header-layouts.html#header-default-toggle-style"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Floating",
+    "url": "header-layouts.html#header-default-floating"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - With topbar",
+    "url": "header-layouts.html#header-with-topbar"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - On scroll behavior",
+    "url": "header-layouts.html#header-onscroll-behavior"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Transparent",
+    "url": "header-layouts.html#header-default-transparent"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Color schemes",
+    "url": "header-layouts.html#header-default-color-schemes"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Navbar horizontal scroll",
+    "url": "header-layouts.html#header-default-navbar-horizontal-scroll"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - One-page navigation",
+    "url": "header-layouts.html#header-default-one-page-navigation"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Fullscreen",
+    "url": "header-layouts.html#header-fullscreen"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Search",
+    "url": "header-layouts.html#search"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Account",
+    "url": "header-layouts.html#account"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Shopping cart",
+    "url": "header-layouts.html#shopping-cart"
+  },{
+    "category": "Header layouts",
+    "label": "Header layouts - Sidebar on Hamburger button",
+    "url": "header-layouts.html#header-sidebar"
+  }
+]

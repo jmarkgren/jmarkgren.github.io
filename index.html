@@ -88,14 +88,136 @@
 
   	<!-- ========== MAIN ========== -->
   	<main id="content" role="main">
-		  <!-- Hero Section -->
-		  <div class="d-lg-flex bg-navy">
-			<div class="container d-lg-flex align-items-lg-center min-vh-lg-100 space-bottom-2 space-top-4 space-lg-0">
-				<div class="w-lg-60 mt-lg-9">
-					<div class="mb-6">
-						<h1 class="h2 font-weight-bolder space-top-2 mb-4 text-white"><span class="text-white-70">Let's dream,</span> together.</h1>
-						<p class="text-white">Right now, millions of people are turning to the internet, never in human history have so many people connected via technology. <br><br>
-								
+		<!-- Hero Section -->
+		<div class="position-relative">
+		<!-- Main Slider -->
+		<div id="heroSlider" class="js-slick-carousel slick"
+				data-hs-slick-carousel-options='{
+				"vertical": true,
+				"verticalSwiping": true,
+				"infinite": true,
+				"autoplay": true,
+				"autoplaySpeed": 10000,
+				"dots": true,
+				"dotsClass": "slick-pagination slick-pagination-white slick-pagination-vertical d-lg-none position-absolute bottom-0 right-0 mb-3 mr-3",
+				"asNavFor": "#heroSliderNav",
+				"responsive": [
+				{
+					"breakpoint": 576,
+					"settings": {
+					"vertical": false,
+					"verticalSwiping": false
+					}
+				}
+				]
+			}'>
+	
+			<div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(assets/img/1920x1080/img33.jpg);">
+			<!-- News Block -->
+			<div class="container d-flex align-items-center min-h-620rem">
+				<div class="w-lg-40 mr-5">
+					<div class="mb-5">
+
+							<p class="text-white h2" data-hs-slick-carousel-animation="fadeInUp"
+						data-hs-slick-carousel-animation-delay="300">Right now, millions of people are turning to the internet. Never in history have so many people connected via technology.</p>
+							
+					</div>
+					<a class="btn btn-primary btn-wide transition-3d-hover" href="single-article.html"
+						data-hs-slick-carousel-animation="fadeInUp"
+						data-hs-slick-carousel-animation-delay="300">Learn More<i class="fas fa-angle-right fa-sm ml-1"></i></a>
+						
+					</div>
+				</div>
+				<!-- End News Block -->
+			</div>
+	
+			<div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(assets/img/1920x1080/img5.jpg);">
+			<!-- News Block -->
+			<div class="container d-flex align-items-center min-h-620rem">
+				<div class="w-lg-40 mr-5">
+	
+				<div class="mb-5">
+					<h2 class="h1 font-weight-bold text-white"
+						data-hs-slick-carousel-animation="fadeInUp"
+						data-hs-slick-carousel-animation-delay="150">More than ever, agents need to keep up with digital marketing to stay relevant.</h2>
+				</div>
+				<a class="btn btn-primary btn-wide transition-3d-hover" href="single-article.html"
+					data-hs-slick-carousel-animation="fadeInUp"
+					data-hs-slick-carousel-animation-delay="300">Learn More<i class="fas fa-angle-right fa-sm ml-1"></i></a>
+				</div>
+			</div>
+			<!-- End News Block -->
+			</div>
+	
+			<div class="js-slide d-flex gradient-x-overlay-sm-navy bg-img-hero min-h-620rem" style="background-image: url(assets/img/1920x1080/img21.jpg);">
+			<!-- News Block -->
+			<div class="container d-flex align-items-center min-h-620rem">
+				<div class="w-lg-40 mr-5">
+				<div class="mb-7">
+	
+					<h2 class="h1 font-weight-bold text-white"
+						data-hs-slick-carousel-animation="fadeInUp"
+						data-hs-slick-carousel-animation-delay="150">At PropertySimple we do just that — we help agents like you succeed online.</h2>
+				</div>
+				<a class="btn btn-primary btn-wide transition-3d-hover" href="single-article.html"
+					data-hs-slick-carousel-animation="fadeInUp"
+					data-hs-slick-carousel-animation-delay="300">Learn More <i class="fas fa-angle-right fa-sm ml-1"></i></a>
+				</div>
+			</div>
+			<!-- End News Block -->
+			</div>
+		</div>
+		<!-- End Main Slider -->
+	
+		<!-- Slider Nav -->
+		<div class="container slick-pagination-line-wrapper content-centered-y right-0 left-0">
+			<div class="content-centered-y right-0 mr-3">
+			<div id="heroSliderNav" class="js-slick-carousel slick slick-pagination-line max-w-27rem ml-auto"
+					data-hs-slick-carousel-options='{
+					"vertical": true,
+					"verticalSwiping": true,
+					"infinite": true,
+					"autoplay": true,
+					"autoplaySpeed": 10000,
+					"slidesToShow": 3,
+					"isThumbs": true,
+					"asNavFor": "#heroSlider"
+				}'>
+				<div class="js-slide my-3">
+				<span class="text-white">Times are changing</span>
+	
+				<span class="slick-pagination-line-progress">
+				<span class="slick-pagination-line-progress-helper"></span>
+				</span>
+				</div>
+				<div class="js-slide my-3">
+				<span class="text-white">Calling all agents</span>
+	
+				<span class="slick-pagination-line-progress">
+				<span class="slick-pagination-line-progress-helper"></span>
+				</span>
+				</div>
+				<div class="js-slide my-3">
+				<span class="text-white">Client Promise</span>
+	
+				<span class="slick-pagination-line-progress">
+				<span class="slick-pagination-line-progress-helper"></span>
+				</span>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- End Slider Nav -->
+		</div>
+		<!-- End Hero Section -->
+		<section class="space-top-2 container"> 
+			<div class="row">
+				<div class="col-12 col-lg-8">
+					<div class="bg-navy border-0 rounded p-6">
+						<span class="badge badge-secondary badge-pill py-2 px-3 mb-3">Important Announcement for COVID19</span>
+						<h1 class="h2 font-weight-bolder mb-4 text-white"><span class="text-white-70">Let's dream,</span> together.</h1>
+						<p class="text-white text-left">Right now, millions of people are turning to the internet, never in human history have so many people connected via technology. <br><br>
+									
 							More than ever, people are dreaming of a better future, a happier home, and closer community. <br><br>
 							
 							PropertySimple has helped thousands of realtors connect with people via the internet, it’s what we do. And in the past few weeks, we’ve witnessed the real estate industry realize something we’ve known all along, behind all those online leads are real people. People dreaming of a better future who from the comfort of their own home, are finding their next one.<br><br>
@@ -114,108 +236,10 @@
 						</a>
 					</div>
 				</div>
-				<div class="w-lg-40 mt-lg-9 z-index-2" style="background: url(assets/img/psimple/woman.jpg) no-repeat right;">
-
+				<div class="col-12 col-lg-4 rounded" style="background: url(assets/img/psimple/woman-1.jpg">
 				</div>
 			</div>
-		  </div>
-		  <!-- End Hero Section -->
-
-		<!-- Features Section -->
-		<!-- <div id="featuresSection" class="container space-2 space-lg-3">
-			<div class="row justify-content-lg-between align-items-lg-center">
-			  <div class="col-lg-5 mb-9 mb-lg-0">
-				<div class="mb-3">
-				  <h2 class="h1">Whatever work you do, use our design</h2>
-				</div>
-	  
-				<p>After brainstorming about insights, get the power to create something real. Bring your ideas to life and share your vision with concrete elements. Make collaboration and communication easier with your team or your client.</p>
-	  
-				<p>Use our tools to explore your ideas and make your vision come true. Then share your work easily.</p>
-	  
-				<div class="mt-4">
-				  <a class="btn btn-primary btn-wide transition-3d-hover" href="#">Start Now</a>
-				</div>
-			  </div>
-	  
-			  <div class="col-lg-6 col-xl-5">
-				
-				<div class="position-relative min-h-500rem mx-auto" style="max-width: 28rem;">
-				  <figure class="position-absolute top-0 right-0 z-index-2 mr-11" data-aos="fade-up">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 450 450" width="165" height="165">
-					  <g>
-						<defs>
-						  <path id="circleImgID2" d="M225,448.7L225,448.7C101.4,448.7,1.3,348.5,1.3,225l0,0C1.2,101.4,101.4,1.3,225,1.3l0,0
-							c123.6,0,223.7,100.2,223.7,223.7l0,0C448.7,348.6,348.5,448.7,225,448.7z"/>
-						</defs>
-						<clipPath id="circleImgID1">
-						  <use xlink:href="#circleImgID2"/>
-						</clipPath>
-						<g clip-path="url(#circleImgID1)">
-						  <image width="450" height="450" xlink:href="assets/img/450x450/img1.jpg" ></image>
-						</g>
-					  </g>
-					</svg>
-				  </figure>
-	  
-				  <figure class="position-absolute top-0 left-0" data-aos="fade-up" data-aos-delay="300">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 335.2 335.2" width="120" height="120">
-					  <circle fill="none" stroke="#377DFF" stroke-width="75" cx="167.6" cy="167.6" r="130.1"/>
-					</svg>
-				  </figure>
-	  
-				  <figure class="d-none d-sm-block position-absolute top-0 left-0 mt-11" data-aos="fade-up" data-aos-delay="200">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 515 515" width="200" height="200">
-					  <g>
-						<defs>
-						  <path id="circleImgID4" d="M260,515h-5C114.2,515,0,400.8,0,260v-5C0,114.2,114.2,0,255,0h5c140.8,0,255,114.2,255,255v5
-							C515,400.9,400.8,515,260,515z"/>
-						</defs>
-						<clipPath id="circleImgID3">
-						  <use xlink:href="#circleImgID4"/>
-						</clipPath>
-						<g clip-path="url(#circleImgID3)">
-						  <image width="515" height="515" xlink:href="assets/img/515x515/img1.jpg" transform="matrix(1 0 0 1 1.639390e-02 2.880859e-02)"></image>
-						</g>
-					  </g>
-					</svg>
-				  </figure>
-	  
-				  <figure class="position-absolute top-0 right-0" style="margin-top: 11rem; margin-right: 13rem;" data-aos="fade-up" data-aos-delay="250">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 67 67" width="25" height="25">
-					  <circle fill="#00C9A7" cx="33.5" cy="33.5" r="33.5"/>
-					</svg>
-				  </figure>
-	  
-				  <figure class="position-absolute top-0 right-0 mr-3" style="margin-top: 8rem;" data-aos="fade-up" data-aos-delay="350">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 141 141" width="50" height="50">
-					  <circle fill="#FFC107" cx="70.5" cy="70.5" r="70.5"/>
-					</svg>
-				  </figure>
-	  
-				  <figure class="position-absolute bottom-0 right-0" data-aos="fade-up" data-aos-delay="400">
-					<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 770.4 770.4" width="280" height="280">
-					  <g>
-						<defs>
-						  <path id="circleImgID6" d="M385.2,770.4L385.2,770.4c212.7,0,385.2-172.5,385.2-385.2l0,0C770.4,172.5,597.9,0,385.2,0l0,0
-							C172.5,0,0,172.5,0,385.2l0,0C0,597.9,172.4,770.4,385.2,770.4z"/>
-						</defs>
-						<clipPath id="circleImgID5">
-						  <use xlink:href="#circleImgID6"/>
-						</clipPath>
-						<g clip-path="url(#circleImgID5)">
-						  <image width="900" height="900" xlink:href="assets/img/900x900/img2.jpg" transform="matrix(1 0 0 1 -64.8123 -64.8055)"></image>
-						</g>
-					  </g>
-					</svg>
-				  </figure>
-				</div>
-				<!-- End SVG Element -->
-			  </div>
-			</div>
-		</div> -->
-		<!-- End Features Section -->
-    
+		</section>
 		<!-- Works Section -->
 		<div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll bg-white" data-options='{direction: "reverse"}'>
 			<div class="dzsparallaxer--target">
@@ -999,6 +1023,35 @@
         var goTo = new HSGoTo($(this)).init();
       });
     });
+	 // initialization of slick carousel
+	 $('#heroSliderNav').on('init', function (event, slick) {
+        $(slick.$slider).find('.slick-pagination-line-progress .slick-pagination-line-progress-helper').each(function() {
+          $(this).css({
+            transitionDuration: (slick.options.autoplaySpeed - slick.options.speed) + 'ms'
+          });
+        });
+
+        setTimeout(function() {
+          $(slick.$slider).addClass('slick-dots-ready');
+        });
+      });
+
+      $('#heroSliderNav').one('beforeChange', function (event, slick) {
+        $(slick.$slider).find('.slick-pagination-line-progress .slick-pagination-line-progress-helper').each(function() {
+          $(this).css({
+            transitionDuration: (slick.options.autoplaySpeed + slick.options.speed) + 'ms'
+          });
+        });
+      });
+
+      // initialization of slick carousel
+      $('.js-slick-carousel').each(function() {
+        var slickCarousel = $.HSCore.components.HSSlickCarousel.init($(this));
+      });
+
+      $(window).on('resize', function() {
+        $('#heroSliderNav').slick('setPosition');
+      });
   </script>
 
   <!-- IE Support -->
